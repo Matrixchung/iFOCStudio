@@ -35,7 +35,7 @@ class DeviceTreeView(QTreeWidget):
         self.torque.setText(0, 'Torque Control Type')
         self.torque.setIcon(0, GUIToolKit.getIconByName('gear'))
         self.selectorTorque = QtWidgets.QComboBox(self)
-        self.selectorTorque.addItems(['Voltage', 'DC Curret', 'FOC Current'])
+        self.selectorTorque.addItems(['Voltage', 'DC Current', 'FOC Current'])
         self.selectorTorque.currentIndexChanged.connect(self.changeTorque)
         self.setItemWidget(self.torque,1,self.selectorTorque)
         
@@ -48,8 +48,8 @@ class DeviceTreeView(QTreeWidget):
         
         self.PIDVelocityConfig = self.addPIDSubtree(self.motionControl,'Velocity PID')
         self.PIDAngleConfig = self.addPIDSubtree(self.motionControl,'Angle PID')
-        self.PIDCurrentQConfig = self.addPIDSubtree(self.motionControl,'Current q PID')
-        self.PIDCurrentDConfig = self.addPIDSubtree(self.motionControl,'Current d PID')
+        self.PIDCurrentQConfig = self.addPIDSubtree(self.motionControl,'Current Iq PID')
+        self.PIDCurrentDConfig = self.addPIDSubtree(self.motionControl,'Current Id PID')
 
         self.limitsConfig = QtWidgets.QTreeWidgetItem(self.sFOCDevice)
         self.limitsConfig.setText(0, 'Limits')

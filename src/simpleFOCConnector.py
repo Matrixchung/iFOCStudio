@@ -833,7 +833,7 @@ class SerialPortReceiveHandler(QtCore.QThread):
     def handle_received_data(self, data):
         if not data:
             return
-            
+        logging.info(f"Arrived data: {data}")
         if self.isDataReceivedMonitoring(data):
             try:
                 v = data.rstrip().split('\t')
