@@ -12,7 +12,7 @@ class UserInteractionMainWindow(object):
 
         main_window.setObjectName('MainWindow')
         main_window.resize(1300, 900)
-        main_window.setWindowTitle('SimpleFOC Configuration Tool ')
+        main_window.setWindowTitle('iFOCStudio ')
 
         self.centralwidget = QtWidgets.QWidget(main_window)
         self.centralwidget.setObjectName('centralwidget')
